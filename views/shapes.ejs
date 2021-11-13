@@ -1,0 +1,17 @@
+<%- include('header', {title: 'UFO Shapes'}); -%>
+
+<div class="row shape-container">
+  <div class="col-sm-8 shape-title">
+    <h1>List of UFO Shapes</h1>
+  </div>
+
+  <div class="col-sm-2 shape-list">
+    <% shapeArray.forEach((index) => { %>
+    <a href="/shapes/<%= index %>">
+      <div><%= index %></div>
+    </a>
+    <% }) %>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<%- include('footer'); -%>

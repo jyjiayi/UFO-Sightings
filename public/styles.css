@@ -1,0 +1,206 @@
+* {
+  font-family: "Mohave", sans-serif;
+}
+
+.after-nav-bar {
+  position: relative;
+  top: 41px;
+}
+
+.navbar-brand {
+  font-size: 15px;
+}
+
+.nav-link {
+  font-size: 12px;
+}
+
+.navbar-toggler {
+  font-size: 10px;
+}
+
+.navbar {
+  padding: 5px 10px;
+}
+
+/* all sighting page*/
+.all-sighting-container {
+  background-image: url(https://i.natgeofe.com/n/2589f03e-85e8-4cdc-85fd-285c8a489bcb/01-edge-of-space-sts080-759-038_orig_3x4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 15px 20px;
+}
+
+.all-sighting-row img {
+  width: 100%;
+  height: auto;
+}
+
+.intro-container {
+  color: white;
+  padding: 0px 20px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.list-container {
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 20px 20px 0px 20px;
+}
+
+.list-container h3 {
+  color: white;
+  text-align: none;
+}
+
+.sort-button {
+  border-color: grey solid;
+  border-radius: 8px;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table a {
+  color: black;
+}
+
+.delete-button {
+  background: transparent;
+  color: white;
+  border: white solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.edit-button {
+  background: transparent;
+  color: white;
+  border: white solid;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.table form {
+  padding-top: 10px;
+}
+
+/*Single-sighting ejs*/
+
+.sighting-title {
+  background-color: navy;
+  color: white;
+  padding: 30px 20px 20px 20px;
+}
+
+.sighting-details {
+  padding: 20px;
+}
+
+.col-edit {
+  margin-top: 3px;
+}
+.edit {
+  border: black solid 2px;
+  border-radius: 5px;
+  padding: 1px 6px;
+  color: black;
+}
+
+.delete {
+  background-color: white;
+  border-radius: 5px;
+  border-color: black;
+  margin: 0px;
+}
+
+/*Shapes ejs*/
+.shape-container {
+  text-align: center;
+  height: 100%;
+  width: auto;
+}
+
+.shape-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*sighting and edit ejs*/
+.sighting-form-container {
+  padding: 10px 10px;
+}
+
+.sighting-form-container input {
+  border-radius: 5px;
+  border: grey solid 1px;
+  overflow-wrap: break-word;
+}
+
+.sighting-form-container textarea {
+  border-radius: 5px;
+  border: grey solid 1px;
+  overflow-wrap: break-word;
+}
+
+.input-field {
+  display: flex;
+  margin-top: 20px;
+  height: 20px;
+}
+
+.text-input {
+  height: 100px;
+  width: 100%;
+}
+
+.summary-input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.summary-input input {
+  height: 50px;
+  width: 100%;
+}
+
+.summary-input textarea {
+  height: 50px;
+  width: 100%;
+}
+
+.entry-time {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.entry-time input {
+  width: 150px;
+}
+
+/*shape-sighting ejs*/
+.shape-name {
+  padding: 30px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape-sighting-title {
+  background-color: navy;
+  color: white;
+  padding: 20px 10px 10px 10px;
+}

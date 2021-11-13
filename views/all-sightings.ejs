@@ -1,0 +1,73 @@
+<%- include('header', {title: 'Main Page'}); -%>
+
+<div class="all-sighting-container">
+  <div>
+    <div class="row intro-container">
+      <div class="col-sm-4">
+        <h2>All about UFO Sightings</h2>
+      </div>
+      <div class="col-sm-8">
+        <h4>
+          We are more than an interest group, we are committed to trace down
+          UFOs
+        </h4>
+      </div>
+    </div>
+
+    <div class="list-container">
+      <div class="row">
+        <div class="col-sm-6"><h3>List of Sightings</h3></div>
+        <div class="col-sm-6">
+          <form>
+            <select name="sighting">
+              <option value="shape">Shape</option>
+              <option value="city">City</option>
+              <option value="state">State</option>
+              <!-- <option value="date_time">Date & Time</option> -->
+            </select>
+            <button class="sort-button" type="submit">Sort</button>
+          </form>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date & Time</th>
+            <th class="d-none d-sm-table-cell" scope="col">City</th>
+            <th scope="col">State</th>
+            <th class="d-none d-sm-table-cell" scope="col">Shape</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% sightings.forEach(index => { %>
+          <tr>
+            <th scope="row">              
+              <a href="/sighting/<%= sightings.indexOf(index)%>"><%= index.date_time %></th></a>
+            <td class="d-none d-sm-table-cell "><%= index.city %></td>
+            <td><%= index.state %></td>
+            <td class="d-none d-sm-table-cell"><%= index.shape %></td>
+            <td>
+              <a href="/sighting/<%= sightings.indexOf(index)%>/edit"><i class="fas fa-pencil-alt edit-button"></i></a>
+            </td>
+            <td>
+              <form
+                action="/sighting/<%= sightings.indexOf(index) %>/delete?_method=DELETE"
+                method="POST"
+              >
+                <button type="submit" class="delete-button">
+                  <i class="fas fa-trash" value="Delete"></i>
+                </button>
+              </form>
+            </td>
+            <% }) %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%- include('footer'); -%>

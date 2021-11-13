@@ -1,0 +1,29 @@
+<%- include('header', {title: 'Single Sighting'}); -%>
+
+<div class="single-sighting-container">
+  <div class="sighting-title">
+    <h2>Sighting #<%= Number(index)+1 %></h2>
+  </div>
+  <div class="sighting-details">
+    <% Object.keys(requiredSighting).forEach((element) => { %>
+    <div class="row">
+      <div class="col-3 col-sm-2"><%= element.toUpperCase()%>:</div>
+      <div class="col-9 col-sm-10"><%= requiredSighting[element] %></div>
+    </div>
+    <% })%>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-3 col-edit">
+    <a href="/sighting/<%= index %>/edit" class="edit">EDIT</a>
+  </div>
+  <div class="col-3">
+    <form action="/sighting/<%= index %>/delete?_method=DELETE" method="POST">
+      <button type="submit" class="delete">DELETE</button>
+    </form>
+  </div>
+  <div class="col-3"></div>
+</div>
+<%- include('footer'); -%>

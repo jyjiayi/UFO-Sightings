@@ -1,0 +1,79 @@
+<%- include('header', {title: 'Edit Sighting'}); -%>
+<div class="sighting-form-container">
+  <form action="/sighting/<%=index %>?_method=PUT" method="POST">
+    <div>
+      <label for="text">Text:</label><br />
+      <textarea type="text" id="text" name="text" class="text-input">
+<%= text %></textarea
+      ><br />
+    </div>
+    <div class="row">
+      <div class="col-sm-2 input-field">
+        <label for="date_time">Date & Time:</label><br />
+      </div>
+      <div class="col-sm-4 input-field">
+        <input
+          type="text"
+          id="date_time"
+          name="date_time"
+          value="<%= date_time %>"
+        /><br />
+      </div>
+      <div class="col-sm-2 input-field">
+        <label for="city">City:</label><br />
+      </div>
+      <div class="col-sm-4 input-field">
+        <input type="text" id="city" name="city" value="<%= city %>" /><br />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2 input-field">
+        <label for="state">State:</label><br />
+      </div>
+      <div class="col-sm-4 input-field">
+        <input type="text" id="state" name="state" value="<%= state %>" /><br />
+      </div>
+      <div class="col-sm-2 input-field">
+        <label for="shape">Shape:</label><br />
+      </div>
+      <div class="col-sm-4 input-field">
+        <input type="text" id="shape" name="shape" value="<%= shape %>" /><br />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2 input-field">
+        <label for="duration">Duration:</label><br />
+      </div>
+      <div class="col-sm-2 input-field">
+        <input
+          type="text"
+          id="duration"
+          name="duration"
+          value="<%= duration %>"
+        /><br />
+      </div>
+    </div>
+
+    <div class="summary-input">
+      <label for="summary">Summary:</label><br />
+      <textarea type="text" id="summary" name="summary"><%= summary %></textarea
+      ><br />
+    </div>
+
+    <div class="entry-time">
+      <label for="entry_time">Entry Time:</label>
+      <input
+        type="text"
+        id="entry_time"
+        name="entry_time"
+        value="<%= entry_time%>"
+      />
+    </div>
+    <div>
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+</div>
+<%- include('footer'); -%>
